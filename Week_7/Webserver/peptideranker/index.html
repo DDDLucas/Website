@@ -1,0 +1,88 @@
+<html>
+<head>
+   <title>PeptideRanker</title>
+<style type="text/css">
+a {color=black;font-color=black}
+a:hover {text-decoration:none;color:blue}
+background-image : url(main.jpg);
+background-repeat: no-repeat;
+#pup {
+  position:absolute;
+  z-index:200; /* aaaalways on top*/
+  padding: 3px;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 250px;
+  border: 1px solid black;
+  background-color: #777;
+  color: white;
+  font-size: 0.95em;
+
+</style>
+</head>
+<body>
+&nbsp;
+<div style="margin-left:10%">
+<script type="text/javascript" src="/jquery.js"></script>
+<script type="text/javascript" src="/popup.js"></script>
+</div>
+
+
+<!--<img src="topm.jpg" width=650>-->
+<table width=650 height=304 border="0" cellpadding=10 cellspacing="0">
+
+<form METHOD="POST" ACTION="https://lisda.ucd.ie/cgi-bin/predict_peptideranker">
+
+<tr>
+<td colspan=2>
+<font size=+2 face="Arial, Helvetica, sans-serif" color="#333333">
+PeptideRanker: ranks peptide(s) by the predicted probability that the peptide will be bioactive.</font>
+</td>
+</tr>
+
+<tr>
+</tr>
+
+<tr><td bgcolor="#777777" colspan=2>
+<font size=+0.5 face="Arial, Helvetica, sans-serif" color="white">
+Peptides (up to 64kbytes)<br/>
+<a title='AAVALLPAVLLALLAKNNLKDCGLFHI
+CGPGSDDEAAADAQHAAPPKKKRKVGY
+GRKKRRQ
+KALAKALAKLWKALAKAA
+VPALR
+VPMLK
+VPTLK
+VQAILRRNWNQYKIQ
+VRLPPPVRLPPPVRLPPP
+YGRKKRRQRRRGTSSSSDELSWIIGRKKRRQRRRSVYDFFVWL'>
+(1-letter code, each peptide on a separate line)</a>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<textarea NAME="input_text" ROWS=8 COLS=70></textarea>
+</td>
+</tr>
+
+<tr>
+<td colspan=2>
+<br /><input type="submit" value="Predict">  <input type=reset name="reset" Value="Reset"></form>
+<br />
+<font size=-1 face="Arial, Helvetica, sans-serif">
+<br /><b>Please note: it may take a few seconds to serve a query.</b>
+</td>
+</tr>
+
+
+
+
+</table>
+<font size=+0.5 face="Arial, Helvetica, sans-serif" color="white">
+<a href="quickhelp.html" target="help">Quick help and references</a>
+</font><br/>
+<br/>
+
+</body>
+</html>
+
